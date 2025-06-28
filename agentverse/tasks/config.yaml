@@ -43,7 +43,7 @@ environment:
 agents:
   -
     agent_type: llm_eval_multi
-    name: General Public
+    name: Scientist
     final_prompt_to_use: |-
       Please first provide a comprehensive explanation of your evaluation, avoiding any potential bias and ensuring that the order in which the responses were presented does not affect your judgment.
       Then, output two lines indicating the scores for Assistant 1 and 2, respectively.
@@ -54,7 +54,7 @@ agents:
       The score of Assistant 1: [score only]
       The score of Assistant 2: [score only]
     role_description: |-
-      You are now General Public, one of the referees in this task. You are interested in the story and looking for updates on the investigation. Please think critically by yourself and note that it's your responsibility to choose one of which is the better first.
+      You are now an established data scientist, one of the referees in this task. You are interested in the story and looking for updates on the investigation. Please think critically by yourself and note that it's your responsibility to choose one of which is the better first.
     memory:
       memory_type: chat_history
     memory_manipulator:
@@ -67,7 +67,7 @@ agents:
       max_tokens: 512
   -
     agent_type: llm_eval_multi
-    name: Critic
+    name: Haroon
     final_prompt_to_use: |-
       Please first provide a comprehensive explanation of your evaluation, avoiding any potential bias and ensuring that the order in which the responses were presented does not affect your judgment.
       Then, output two lines indicating the scores for Assistant 1 and 2, respectively.
